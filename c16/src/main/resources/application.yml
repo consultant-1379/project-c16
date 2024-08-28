@@ -1,0 +1,17 @@
+#spring:
+#  server:
+#    port: 9090
+#  datasource:
+#    url: 'jdbc:mysql://localhost:3306/db'
+#    username: root
+#    password: password
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        show_sql: 'true'
+#        use_sql_comments: 'true'
+#        format_sql: 'true'

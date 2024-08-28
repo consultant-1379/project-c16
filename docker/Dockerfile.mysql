@@ -1,0 +1,8 @@
+FROM mysql/mysql-server:latest
+
+ENV MYSQL_DATABASE='db'
+ENV MYSQL_USER='user'
+ENV MYSQL_PASSWORD='password'
+ENV MYSQL_ROOT_PASSWORD='password'
+
+COPY my.cnf /etc/my.cnf

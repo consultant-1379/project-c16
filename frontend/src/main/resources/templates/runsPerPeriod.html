@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Jenkins Jobs</title>
+    <style>
+        table, td, th {
+            border: 1px solid black;
+            text-align: center
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+      </style>
+</head>
+<body>
+
+<div align = "center" style="font-size:20px">
+    <p><a href="/">Home</a></p>
+    <p><a href="/averageDeliveryTime">Average Delivery Time</a></p>
+    <p><a href="/averageRestoreTime">Average Restore Time</a></p>
+    <p><a href="/runsPerPeriod">Number Of Deliveries</a></p>
+    <table  >
+        <tr>
+            <th>Job Name</th>
+            <th> < 24hrs</th>
+            <th> < Week</th>
+            <th> < Month</th>
+            <th> < Year</th>
+        </tr>
+        <tr th:each="run: ${runsPerPeriodList}">
+            <td th:text="${run.jobName}"/>
+            <td th:text="${run.perDay}"/>
+            <td th:text="${run.perWeek}"/>
+            <td th:text="${run.perMonth}"/>
+            <td th:text="${run.perPerYear}"/>
+
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
